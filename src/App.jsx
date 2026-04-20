@@ -83,7 +83,7 @@ const styles = `
 
   /* ── Login ── */
   .login-page {
-    min-height: 100vh;
+    min-height: 100dvh;
     display: grid;
     place-items: center;
     padding: 2rem;
@@ -225,6 +225,49 @@ const styles = `
     font-size: 0.72rem;
     margin-top: 1.2rem;
     letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 480px) {
+    .login-page {
+      place-items: center;
+      padding: 1rem;
+    }
+
+    .login-card {
+      padding: 1.25rem;
+      max-width: 100%;
+    }
+
+    .login-badge {
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+    }
+
+    .login-title {
+      font-size: clamp(2rem, 14vw, 2.5rem);
+    }
+
+    .login-sub {
+      font-size: 0.7rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      font-size: 16px;
+      padding: 0.75rem 0.8rem;
+    }
+
+    .btn {
+      font-size: 0.9rem;
+      padding: 0.8rem;
+    }
+
+    .hint {
+      font-size: 0.68rem;
+      margin-top: 1rem;
+    }
   }
 
   /* ── App Layout ── */
