@@ -848,7 +848,9 @@ export default function App() {
   }, [tasks])
 
   const login = () => {
-    const user = USERS.find(u => u.username === creds.username && u.password === creds.password)
+    const username = creds.username.trim()
+    const password = creds.password.trim()
+    const user = USERS.find(u => u.username === username && u.password === password)
     if (user) {
       sessionStorage.setItem('st_user', user.username)
       setSession(user.username)
